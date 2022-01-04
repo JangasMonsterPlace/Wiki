@@ -25,7 +25,7 @@ This endpoint returns available source groups
 ```
 
 
-**Get Date Range**
+# Get Date Range
 This endpoint returns min- and max date of given sources.
 
 **Request Information**
@@ -52,7 +52,7 @@ This endpoint returns min- and max date of given sources.
 ```
 
 
-**Create Job**
+# Create Job
 This endpoint will create a search request if it's not exists.
 
 **Request Information**
