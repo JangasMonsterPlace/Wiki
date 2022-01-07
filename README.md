@@ -30,18 +30,18 @@ we are using Trello as a ticket manger (lol). There is currently just a single B
 - **R4R**: Ready for Review. If a ticket is done (includes all subtasks) this column is used. We will walk through that column together each friday
 - **Done**: if a ticket is completely done.
 
-### Links
-- [Slack](https://join.slack.com/t/brothersincodegruppe/shared_invite/zt-10pfkhoh3-i7eqRaPHI1IZ8QQBkQxnCw)
-- [Trello](https://trello.com/brothersincode2)
-- [GitHub](https://github.com/JangasMonsterPlace)
-- [Miro](https://miro.com/app/board/uXjVOZPHWTs=/?fromRedirect=1)
-
 #### Ticket Rules
 - Ticket should have a description
 	- Put Link to Story in the first place of the description
 	- If the ticket blocks other tickets, make a list with links to the tickets which are blocked by this ticket
 	- If the ticket is blocked by other tickets, make a list with links to the tickets which are blocking this ticket
 - Add a new ticket always into the checklist of the story where it's belongs to
+
+### Links
+- [Slack](https://join.slack.com/t/brothersincodegruppe/shared_invite/zt-10pfkhoh3-i7eqRaPHI1IZ8QQBkQxnCw)
+- [Trello](https://trello.com/brothersincode2)
+- [GitHub](https://github.com/JangasMonsterPlace)
+- [Miro](https://miro.com/app/board/uXjVOZPHWTs=/?fromRedirect=1)
 
 ## Past Hackathons & Projects
 - Dec 7, 2021 - Feb 5, 2022 [Google Cloud Easy as Pie Serverless Hackathon by BeMyApp](https://www.eventbrite.de/e/google-cloud-easy-as-pie-serverless-hackathon-tickets-224293908117?keep_tld=1)
