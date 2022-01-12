@@ -4,7 +4,8 @@ This endpoint returns available source groups
 **Request Information**
 | Type | URL                 |
 | ---- | ------------------- |
-| GET  | /source-groups      |
+| GET  | /get_sources        |
+| GET  | /source-groups (expired)      |
 
 **Query Parameter**
 | Property Name           | type   | required | Description                     |
@@ -18,8 +19,8 @@ This endpoint returns available source groups
 ```
 {
   groups: [
-    {"type": "csv", group: "disneydata"},
-    {"type": "csv", group: "googleplay"},
+    {"review_count": 1005, "source_type": "csv", "group": "disney"},
+    {"review_count": 985, "source_type": "csv", "group": "googleplay"}
   ]
 }
 ```
@@ -31,13 +32,14 @@ This endpoint returns min- and max date of given sources.
 **Request Information**
 | Type | URL                 |
 | ---- | ------------------- |
-| GET  | /date-range         |
+| GET  | /get_source_date_range         |
+| GET  | /date-range (expired)         |
 
 **Query Parameter**
 | Property Name           | type   | required | Description                     |
 | ----------------------- | ------ | -------- | ------------------------------- |
-| type                    | str    | true     | always use `group` (will be changed later) |
-| q                       | List[str] | true   | groupnames of chosen sources |
+| group                   | List[str] | true  | List of selected group names    |
+| source_type             | List[str] | true  | List of selected source types   |
 
 **Payload**
 | Property Name           | type   | required | Description                     |
@@ -46,8 +48,37 @@ This endpoint returns min- and max date of given sources.
 **Response**
 ```
 {
-  min_date: "2020-12-01"
-  max_date: "2021-12-13"
+  "review_count": 1005,
+  "min_date": "2017-06-01",
+  "max_date": "2019-05-01"
+}
+```
+
+
+# Get Review Count
+This endpoint returns count of reviews for given filter options
+
+**Request Information**
+| Type | URL                 |
+| ---- | ------------------- |
+| GET  | /get_review_count   |
+
+**Query Parameter**
+| Property Name           | type   | required | Description                     |
+| ----------------------- | ------ | -------- | ------------------------------- |
+| group                   | List[str] | true  | List of selected group names    |
+| source_type             | List[str] | true  | List of selected source types   |
+| min_date                | str       | true  | minimum date (included). Format %Y-%m-%d   |
+| max_date                | str       | true  | maximum date (excluded). Format %Y-%m-%d   |
+
+**Payload**
+| Property Name           | type   | required | Description                     |
+| ----------------------- | ------ | -------- | ------------------------------- |
+
+**Response**
+```
+{
+  "review_count": 1005
 }
 ```
 
